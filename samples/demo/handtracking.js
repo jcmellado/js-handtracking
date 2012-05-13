@@ -22,7 +22,9 @@ THE SOFTWARE.
 
 var HT = HT || {};
 
-HT.Tracker = function(){
+HT.Tracker = function(params){
+  this.params = params || {};
+
   this.mask = new CV.Image();
   this.eroded = new CV.Image();
   this.contours = [];
@@ -33,8 +35,12 @@ HT.Tracker = function(){
 HT.Tracker.prototype.detect = function(image){
   this.skinner.mask(image, this.mask);
   
-  CV.erode(this.mask, this.eroded);
-  CV.dilate(this.eroded, this.mask);
+  if (this.params.fast){
+    this.blackBorder(this.mask);
+  }else{
+    CV.erode(this.mask, this.eroded);
+    CV.dilate(this.eroded, this.mask);
+  }
 
   this.contours = CV.findContours(this.mask);
 
@@ -56,14 +62,14 @@ HT.Tracker.prototype.findCandidate = function(contours, minSize, epsilon){
 
 HT.Tracker.prototype.findMaxArea = function(contours, minSize){
   var len = contours.length, i = 0,
-      minArea = -Infinity, area, contour;
+      maxArea = -Infinity, area, contour;
 
   for (; i < len; ++ i){
     area = CV.area(contours[i]);
     if (area >= minSize){
     
-      if (area > minArea) {
-        minArea = area;
+      if (area > maxArea) {
+        maxArea = area;
       
         contour = contours[i];
       }
@@ -71,6 +77,27 @@ HT.Tracker.prototype.findMaxArea = function(contours, minSize){
   }
   
   return contour;
+};
+
+HT.Tracker.prototype.blackBorder = function(image){
+  var img = image.data, width = image.width, height = image.height,
+      pos = 0, i;
+
+  for (i = 0; i < width; ++ i){
+    img[pos ++] = 0;
+  }
+  
+  for (i = 2; i < height; ++ i){
+    img[pos] = img[pos + width - 1] = 0;
+
+    pos += width;
+  }
+
+  for (i = 0; i < width; ++ i){
+    img[pos ++] = 0;
+  }
+  
+  return image;
 };
 
 HT.Candidate = function(contour){
