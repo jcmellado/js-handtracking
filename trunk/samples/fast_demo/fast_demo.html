@@ -31,7 +31,7 @@
       this.image = this.context.createImageData(
         this.canvas.width * 0.2, this.canvas.height * 0.2);
       
-      navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia;
+      navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
       if (navigator.getUserMedia){
         navigator.getUserMedia({video:true},
           function(stream){ return that.videoReady(stream); },
@@ -42,6 +42,8 @@
     DEMO.prototype.videoReady = function(stream){
       if (window.webkitURL) {
         this.video.src = window.webkitURL.createObjectURL(stream);
+      } else if (video.mozSrcObject !== undefined) {
+        this.video.mozSrcObject = stream;
       } else {
         this.video.src = stream;
       }
