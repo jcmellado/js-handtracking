@@ -429,4 +429,4 @@ CV.area = function(poly){
   return area;
 };
 
-module.export = CV; 
+module.exports = CV; 

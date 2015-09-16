@@ -157,4 +157,4 @@ HT.Skinner.prototype.mask = function(imageSrc, imageDst){
 
 
 
-module.export = HT;
+module.exports = HT;
