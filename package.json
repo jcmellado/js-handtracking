@@ -9,14 +9,14 @@
   "main" : "src/handtracking.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/pr1ntr/js-handtracking.git"
+    "url": "git+ssh://git@github.com/jcmellado/js-handtracking.git"
   },
   "author": "Juan Mellado",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pr1ntr/js-handtracking/issues"
+    "url": "https://github.com/jcmellado/js-handtracking/issues"
   },
-  "homepage": "https://github.com/pr1ntr/js-handtracking#readme",
+  "homepage": "https://github.com/jcmellado/js-handtracking#readme",
   "devDependencies": {
     "browserify": "^11.1.0",
     "uglify-js": "^2.4.24"
