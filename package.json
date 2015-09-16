@@ -1,6 +1,6 @@
 {
   "name": "js-handtracking",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "JavaScript library for hand tracking applications.",
   "scripts": {
     "build" : "browserify src/handtracking.js --standalone HT > dist/js-handtracking.js && uglifyjs dist/js-handtracking.js --compress > dist/js-handtracking.min.js",
