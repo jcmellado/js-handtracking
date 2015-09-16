@@ -1,4 +1,4 @@
-/*
+/*!
 Copyright (c) 2012 Juan Mellado
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -19,6 +19,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
+
+var CV = require('./cv.js');
 
 var HT = HT || {};
 
@@ -152,3 +154,7 @@ HT.Skinner.prototype.mask = function(imageSrc, imageDst){
   
   return imageDst;
 };
+
+
+
+module.export = HT;
