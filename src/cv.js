@@ -429,4 +429,12 @@ CV.area = function(poly){
   return area;
 };
 
-module.exports = CV; 
+ 
+
+
+if ( typeof define === 'function' && define.amd ) {
+    define( 'cv', CV );
+} else if ( 'undefined' !== typeof exports && 'undefined' !== typeof module ) {
+   module.exports = CV;
+}
+

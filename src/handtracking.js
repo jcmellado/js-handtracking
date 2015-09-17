@@ -20,7 +20,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-var CV = require('./cv.js');
+
+if(typeof require === 'function') {
+  var CV = require('./cv.js');
+}
+
 
 var HT = HT || {};
 
@@ -157,4 +161,8 @@ HT.Skinner.prototype.mask = function(imageSrc, imageDst){
 
 
 
-module.exports = HT;
+if ( typeof define === 'function' && define.amd ) {
+  define( 'js-handtracking', HT );
+} else if ( 'undefined' !== typeof exports && 'undefined' !== typeof module ) {
+  module.exports = HT;
+}

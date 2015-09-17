@@ -430,7 +430,15 @@ CV.area = function(poly){
   return area;
 };
 
-module.exports = CV; 
+ 
+
+
+if ( typeof define === 'function' && define.amd ) {
+    define( 'cv', CV );
+} else if ( 'undefined' !== typeof exports && 'undefined' !== typeof module ) {
+   module.exports = CV;
+}
+
 
 },{}],2:[function(require,module,exports){
 /*!
@@ -455,7 +463,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-var CV = require('./cv.js');
+
+if(typeof require === 'function') {
+  var CV = require('./cv.js');
+}
+
 
 var HT = HT || {};
 
@@ -592,7 +604,10 @@ HT.Skinner.prototype.mask = function(imageSrc, imageDst){
 
 
 
-module.exports = HT;
-
+if ( typeof define === 'function' && define.amd ) {
+  define( 'js-handtracking', HT );
+} else if ( 'undefined' !== typeof exports && 'undefined' !== typeof module ) {
+  module.exports = HT;
+}
 },{"./cv.js":1}]},{},[2])(2)
 });
