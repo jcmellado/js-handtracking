@@ -8,9 +8,9 @@ JavaScript library for hand tracking applications featuring:
  * Convexity Defects calculation
 
 ### Demo ###
-[Basic Demo](http://www.inmensia.com/files/handtracking/demo/index.html), webcam basic demo
+[Basic Demo](https://jcmellado.github.io/js-handtracking/demo/demo.html), webcam basic demo
 
-[Fast Demo](http://www.inmensia.com/files/handtracking/fast_demo/index.html), erode and dilate operations are disabled
+[Fast Demo](https://jcmellado.github.io/js-handtracking/fast_demo/fast_demo.html), erode and dilate operations are disabled
 
 ### Video ###
 
