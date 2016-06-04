@@ -1,0 +1,24 @@
+{
+  "name": "js-handtracking",
+  "version": "0.1.0",
+  "description": "JavaScript library for hand tracking applications.",
+  "scripts": {
+    "build" : "browserify src/handtracking.js --standalone HT > dist/js-handtracking.js && uglifyjs dist/js-handtracking.js --compress > dist/js-handtracking.min.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main" : "src/handtracking.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jcmellado/js-handtracking.git"
+  },
+  "author": "Juan Mellado",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jcmellado/js-handtracking/issues"
+  },
+  "homepage": "https://github.com/jcmellado/js-handtracking#readme",
+  "devDependencies": {
+    "browserify": "^11.1.0",
+    "uglify-js": "^2.4.24"
+  }
+}

@@ -1,4 +1,4 @@
-/*
+/*!
 Copyright (c) 2012 Juan Mellado
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -428,3 +428,13 @@ CV.area = function(poly){
   
   return area;
 };
+
+ 
+
+
+if ( typeof define === 'function' && define.amd ) {
+    define( 'cv', CV );
+} else if ( 'undefined' !== typeof exports && 'undefined' !== typeof module ) {
+   module.exports = CV;
+}
+
