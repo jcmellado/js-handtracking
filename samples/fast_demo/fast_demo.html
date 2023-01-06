@@ -170,17 +170,17 @@
 
 <body style="font-family: monospace;">
 
-  <center>
-    <div style="margin: 10px;"><strong>-= Hand Tracking =-</strong></div>
-    <video id="video" autoplay="true" style="display:none;"></video>
-    <canvas id="canvas" style="width:640px; height:480px;border:1px solid black;"></canvas>
-    <div style="margin: 15px;">
-      <input id="cbxHull" type="checkbox" checked="checked">Convex Hull</input>
-      <input id="cbxDefects" type="checkbox">Convexity Defects</input>
-      <input id="cbxSkin" type="checkbox" checked="checked">Skin Detection</input>
-    </div>
-    <div style="margin: 15px;"><strong>Powered by <a href="http://code.google.com/p/js-handtracking/" target="_blank">js-handtracking</a></strong></div>
-  </center>
+  <div style="display: flex; flex-direction: column; align-items: center;">
+      <div style="margin: 10px;"><strong>-= Hand Tracking =-</strong></div>
+      <video id="video" autoplay="true" style="display:none;"></video>
+      <canvas id="canvas" style="width:640px; height:480px;border:1px solid black;"></canvas>
+      <div style="margin: 15px;">
+        <input id="cbxHull" type="checkbox" checked="checked">Convex Hull</input>
+        <input id="cbxDefects" type="checkbox">Convexity Defects</input>
+        <input id="cbxSkin" type="checkbox" checked="checked">Skin Detection</input>
+      </div>
+      <div style="margin: 15px;"><strong>Powered by <a href="http://code.google.com/p/js-handtracking/" target="_blank">js-handtracking</a></strong></div>
+  </div>
 
 </body>
 
