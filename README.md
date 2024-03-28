@@ -8,13 +8,13 @@ JavaScript library for hand tracking applications featuring:
  * Convexity Defects calculation
 
 ### Demo ###
-[Basic Demo](https://jcmellado.github.io/js-handtracking/demo/demo.html), webcam basic demo
+[Basic Demo](https://jcmellado.github.io/showcase/js/js-handtracking/demo/index.html), webcam basic demo
 
-[Fast Demo](https://jcmellado.github.io/js-handtracking/fast_demo/fast_demo.html), erode and dilate operations are disabled
+[Fast Demo](https://jcmellado.github.io/showcase/js/js-handtracking/fast_demo/index.html), erode and dilate operations are disabled
 
 ### Video ###
 
-[![js-handtracking](http://img.youtube.com/vi/0I1ar9Lrhsw/0.jpg)](http://www.youtube.com/watch?v=0I1ar9Lrhsw)
+[js-handtracking](https://jcmellado.github.io/showcase/videos/js-handtracking_%20JavaScript%20Hand%20Tracking.mp4)
 
 ### Usage ###
 Create one `HT.Tracker` object:
